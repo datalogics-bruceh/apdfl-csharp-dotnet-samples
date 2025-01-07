@@ -130,7 +130,7 @@ def clean_nuget_cache(ctx):
 
 @task()
 def build_samples(ctx, pkg_name='Adobe.PDF.Library.NET', config='Debug'):
-    """Builds the .NET samples"""
+    """Builds the .NET6 samples"""
     ctx.run('invoke clean-samples')
     for sample in samples_list:
         full_path = os.path.join(os.getcwd(), sample)
